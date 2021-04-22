@@ -1,0 +1,102 @@
+
+.section {
+  background-color: rgb(57, 136, 150);
+  height: 8rem;
+  width: 20rem;
+  margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: .2rem;
+}
+
+.h2 {
+  color: rgb(245, 245, 237);
+}
+
+.p {  
+  color: rgb(245, 245, 237);
+}
+
+.starter {
+  height: 10rem;
+}
+
+.potaotes {
+  stroke: rgb(150, 113, 57);
+  height: 20rem;
+  width: 20rem;
+  margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: .2rem;
+}
+.proud {
+  height: 20rem;
+  width: 20rem;
+  // margin: 0 2rem;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+}
+.group {
+  fill: rgb(109, 44, 28);
+  height: 20rem;
+  width: 20rem;
+  margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: .2rem;
+  transform: rotate(90deg);
+}
+
+
+
+.hexagon {
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transform: rotate(120deg);
+     -moz-transform: rotate(120deg);
+      -ms-transform: rotate(120deg);
+       -o-transform: rotate(120deg);
+          transform: rotate(120deg);
+  cursor: pointer;
+  }
+.hexagon-in1 {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotate(-60deg);
+     -moz-transform: rotate(-60deg);
+      -ms-transform: rotate(-60deg);
+       -o-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+  }
+.hexagon-in2 {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url(/images/test.svg);
+  visibility: visible;
+  -webkit-transform: rotate(-60deg);
+     -moz-transform: rotate(-60deg);
+      -ms-transform: rotate(-60deg);
+       -o-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+  }
+.hexagon-in2:hover {
+  background-image: url(http://placekitten.com/241/241);
+  }
+
+.hexagon1 {
+  width: 400px;
+  height: 200px;
+  margin: 0 0 0 -80px;
+}

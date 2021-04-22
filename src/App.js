@@ -1,11 +1,39 @@
-import './App.css';
+import React from 'react';  // , { useRef, useState, useEffect } 
+import HorizontalScroll from './components/HorizontalScroll';
+import FrontSection from './FrontSection';
+import ProjectSection from './ProjectSection';
+import BumperSection from './BumperSection';
 
-function App() {
+import './App.scss';
+
+export default function App() {
+  
+
+  // const headerRef = useRef(null);
+  // const revealRefs = useRef([]);
+  // revealRefs.current = [];
+
+
   return (
-    <div className="App">
-      <h1>Halló, Kolbrún</h1>
-    </div>
-  );
-}
+    <div >
+      
+      <div className='Parallax'>
+        <section className='horizontalSection'>
+          <div className='sommme'></div>
 
-export default App;
+          <HorizontalScroll>
+            <div className='pageContainer'>
+
+              <FrontSection />
+
+              <ProjectSection />
+               
+            </div>
+          </HorizontalScroll>
+
+          <BumperSection />
+        </section>
+      </div>
+    </div>
+  )
+}
