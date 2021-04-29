@@ -11,12 +11,12 @@ jobs:
     steps:
       - checkout
       # install dependencies
-      - run:
-          name: Add GSAP to NPM registry, step 1
-          command: echo "//npm.greensock.com/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-      - run:
-          name: Add GSAP to NPM registry, step 2
-          command: echo "@gsap:registry=https://npm.greensock.com" >> ~/.npmrc
+      # - run:
+      #     name: Add GSAP to NPM registry, step 1
+      #     command: echo "//npm.greensock.com/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+      # - run:
+      #     name: Add GSAP to NPM registry, step 2
+      #     command: echo "@gsap:registry=https://npm.greensock.com" >> ~/.npmrc
       - run:
           name: Install Dependencies
           command: npm install
