@@ -11,15 +11,12 @@ jobs:
     steps:
       - checkout
       - run:
-        - name: Something
-        - command: echo "//npm.greensock.com/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-      - run:
-        - name: Something 2
-        - command: echo "@gsap:registry=https://npm.greensock.com" >> ~/.npmrc
+        name: Add GSAP to NPM registry
+        command: echo "//npm.greensock.com/:_authToken=${NPM_TOKEN}" > ~/.npmrc && echo "@gsap:registry=https://npm.greensock.com" >> ~/.npmrc
       # install dependencies
       - run:
-          name: Install Dependencies
-          command: npm install
+        name: Install Dependencies
+        command: npm install
       # - run:
       #     name: Run tests
       #     command: npm run test
