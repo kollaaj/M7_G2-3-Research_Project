@@ -15,7 +15,7 @@ export default function HexagonsPotatoes({ id, title, subtitle, text }) {
     if (!toggled) {
       const split = new SplitText([testRef.current]);
       gsap.set(testRef.current, { autoAlpha: 1 });
-      gsap.from(split.words, { opacity: 0, rotation: -20, stagger: 0.1, ease: 'bounce' });
+      gsap.from(split.lines, { opacity: 0, rotation: -600, stagger: 0.1, ease: 'back' });
       setToggled(true);
     }
   };

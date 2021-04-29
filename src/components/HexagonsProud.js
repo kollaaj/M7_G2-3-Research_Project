@@ -15,7 +15,7 @@ export default function HexagonsProud({ id, title, subtitle, text }) {
     if (!toggled) {
       const split = new SplitText([testRef.current]);
       gsap.set(testRef.current, { autoAlpha: 1 });
-      gsap.from(split.words, { opacity: 0, rotation: -20, stagger: 0.1, ease: 'bounce' });
+      gsap.from(split.chars, { opacity: 0, rotation: 30, stagger: 0.05, ease: 'bounce' });
       setToggled(true);
     }
   };

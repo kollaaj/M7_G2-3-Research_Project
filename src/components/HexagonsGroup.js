@@ -15,7 +15,7 @@ export default function HexagonsGroup({ id, title, subtitle, text }) {
     if (!toggled) {
       const split = new SplitText([testRef.current]);
       gsap.set(testRef.current, { autoAlpha: 1 });
-      gsap.from(split.words, { opacity: 0, rotation: -20, stagger: 0.1, ease: 'bounce' });
+      gsap.from(split.words, {y:-50, opacity: 0, rotation: 30, stagger:{each:0.05, from:"center"}, ease: 'bounce' });
       setToggled(true);
     }
   };
