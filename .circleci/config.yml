@@ -8,6 +8,10 @@ jobs:
     docker:
       - image: circleci/node:10.16.3
     working_directory: ~/repo
+    dependencies:
+      pre:
+        - echo "//npm.greensock.com/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+        - echo "@gsap:registry=https://npm.greensock.com" >> ~/.npmrc
     steps:
       - checkout
       # install dependencies
