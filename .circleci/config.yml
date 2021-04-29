@@ -12,7 +12,10 @@ jobs:
       - checkout
       - run:
         - name: Something
-        - command: echo "//npm.greensock.com/:_authToken=${NPM_TOKEN}" > ~/.npmrc && echo "@gsap:registry=https://npm.greensock.com" >> ~/.npmrc
+        - command: echo "//npm.greensock.com/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+      - run:
+        - name: Something 2
+        - command: echo "@gsap:registry=https://npm.greensock.com" >> ~/.npmrc
       # install dependencies
       - run:
           name: Install Dependencies
