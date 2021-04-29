@@ -24,3 +24,6 @@ yarn-error.log*
 
 # custom
 .vscode/settings.json
+.npmrc
+
+

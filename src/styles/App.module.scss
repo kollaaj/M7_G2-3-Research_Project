@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+
+.section {
+  background-color: rgb(57, 136, 150);
+  height: 8rem;
+  width: 20rem;
+  margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: .2rem;
+}
+
+.horizontalSection {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.sommme {
+  background-image: 
+  url(/images/desk.svg), 
+  url(/images/backk.svg);
+  opacity: 0.7;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.headerContainer {
+  z-index: 1;
+  width: 90%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  border-bottom: 1px solid #fafafa;
+  
+  .headerline {
+    position: relative;
+    top: 5.5rem;
+    right: 0;
+    border-bottom: 1px solid #fafafa;
+  }
+  
+  h1 {
+    font-family: Halfomania, serif;
+    font-weight: lighter;
+    font-size: 96px;
+    width: 10rem;
+    display: inline-block;
+    
+    a {
+      color: #fafafa;
+      text-decoration: none;
+    }
+  }
+  
+  .link {
+    float: right;
+    padding-top: 2rem;
+    padding-right: 10%;
+    
+    .links {
+      list-style-type: none;
+      cursor: pointer;
+      display: flex;
+
+      a {
+        font-family: 'Aldrich', sans-serif;
+        font-size: 20px;
+        text-decoration: none;
+        padding-right: 2rem;
+        color: #fafafa;
+      }
+    }
+
+  }
+}
+
+.pageContainer {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 0 0 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.progressBarContainer {
+  position: fixed;
+  z-index: 10;
+  border: 1px solid #fafafa;
+  width: 25.5rem;
+  bottom: 5rem;
+  left: 10vw;
+  height: 10px;
+}
+
+
+.progressBar {
+  background: linear-gradient(to left, #fafafa, #7e690e);
+  transform-origin: left;
+  height: 9px;
+}

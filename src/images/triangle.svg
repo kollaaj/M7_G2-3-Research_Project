@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="502" height="442" viewBox="0 0 502 442">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-width: 2px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Triangle_1" data-name="Triangle 1" class="cls-1" d="M251.5,5L500,438H3Z"/>
+  <path id="Triangle_1_copy" data-name="Triangle 1 copy" class="cls-1" d="M251.5,42.469L468.781,421.062H34.219Z"/>
+</svg>
