@@ -4,6 +4,10 @@ import FrontSection from './FrontSection';
 import ProjectSection from './ProjectSection';
 // import BumperSection from './BumperSection';
 import styles from './styles/App.module.scss';
+import { gsap } from 'gsap';
+import { ScrollToPlugin, } from 'gsap/ScrollToPlugin';
+
+gsap.registerPlugin(ScrollToPlugin);
 
 export default function App() {
   const [scroll, setScroll] = useState(0);
@@ -24,19 +28,25 @@ export default function App() {
       return () => window.removeEventListener("scroll", progressBarHandler);
   });
 
+  // const onAboutMeClick = (e) => {
+  //   console.log('aboutme');
+  //   gsap.to(window, { duration: 2, scrollTo: '#project' })
+  //   e.preventDefault();
+  // };
+
   return (
     <div >
 
       <div className={styles.Parallax}>
         <section className={styles.horizontalSection}>
-          <div className={styles.sommme}></div>
+          <div className={`bgimg ${styles.sommme}`}></div>
 
           <div className={styles.headerContainer}>
             <div className={styles.headerline}></div>
             <h1><a href="#front">Kolbrun</a></h1>
             <div className={styles.link}>
               <ul className={styles.links}>
-                <li><a href='#bump'>About me</a></li>
+                <li><a href='#bump' >About me</a></li>
                 <li><a href='#project'>Projects</a></li>
                 <li><a href='#bump'>Contact</a></li>
               </ul>
@@ -44,9 +54,7 @@ export default function App() {
             <div id="progressBarContainer" className={styles.progressBarContainer}>
                 <div id="progressBar" className={styles.progressBar} style={{transform: `scale(${scroll}, 1)`, opacity: `${scroll}`}} />
             </div>
-            {/* <div className={styles.progressBar}>
-              <ProgressBar bgcolor={"#fafafa"} completed={completed} />
-            </div> */}
+            
           </div>
 
           <HorizontalScroll>
@@ -59,7 +67,6 @@ export default function App() {
             </div>
           </HorizontalScroll>
 
-          {/* <BumperSection/> */}
         </section>
       </div>
     </div>

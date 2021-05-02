@@ -30,7 +30,7 @@ export default function Filler() {
 
 
   return (
-    <div className={styles.fillerContainer} >
+    <div id='about-me' className={styles.fillerContainer} >
       <div className={styles.dividerContainer}>
         <div className={styles.divider}></div>
       </div>

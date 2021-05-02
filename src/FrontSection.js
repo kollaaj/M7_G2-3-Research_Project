@@ -15,20 +15,18 @@ export default function FrontSection() {
   useEffect(() => {
     
     const tl = gsap.timeline({defaults:{opacity:0, ease:'back'}});
-
-    tl.from([textRef.current], {ease:'linear'})
-      .from('h1', {x:120, duration:1 })
+    tl.from('h1', {x:120, duration:1 })
       .from('h2', {x:-100, duration:1.3 }, '<')
-      .from('h3', {y:60}, '-=0.1')
+      .from('h3', {y:60, stagger: 0.3}, '-=0.1')
       .from('.buttonContainer', {y:100, duration:1}, '<')
 
   }, [])
 
   useEffect(() => {
 
-
-    var tl = gsap.timeline({repeat: -1, yoyo:'true', defaults: {duration: 1, type: "rotational",}})
     
+
+    let tl = gsap.timeline({repeat: -1, defaults: {duration: 1}})
     tl.to("#hexx", {morphSVG:"#bat"}, "+=1")
       .to("#hexx", {morphSVG:"#uni"}, "+=1")
       .to("#hexx", {morphSVG:"#hexx"}, "+=1")
@@ -49,10 +47,12 @@ export default function FrontSection() {
         <div className={styles.LandingText} ref={textRef}>
           <h1>Portfolio</h1>
           <h2>ish</h2>
-          <h3 className={styles.h3}>Something about something that is maybe relevant</h3>
+          <h3 className={styles.h3}>Something about</h3>
+          <h3 className={styles.h3}>something that is</h3>
+          <h3 className={styles.h3}>maybe relevant</h3>
           <div className={`${styles.buttonContainer} buttonContainer`}>
             <div className={styles.line1}></div>
-            <a href="/" className={styles.future}>see what I created</a>
+            <a href="/" className={styles.future}>click to see that again</a>
             <div className={styles.line2}></div>
           </div>
         </div>
