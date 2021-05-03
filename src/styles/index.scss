@@ -1,3 +1,5 @@
+@import './fonts/halfomania-regular/stylesheet.css';
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,7 +13,7 @@ body {
   white-space: nowrap;
 }
 
-@font-face {
-  font-family: 'Halfomania-Regular';
-  src: local('Halfomania-Regular'), url('./fonts/Halfomania-Regular.ttf') format('truetype');
-}
+// @font-face {
+//   font-family: 'Halfomania-Regular';
+//   src: local('Halfomania-Regular'), url('./fonts/Halfomania-Regular.ttf') format('truetype');
+// }
