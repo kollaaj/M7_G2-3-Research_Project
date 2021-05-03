@@ -13,7 +13,11 @@ body {
   white-space: nowrap;
 }
 
-// @font-face {
-//   font-family: 'Halfomania-Regular';
-//   src: local('Halfomania-Regular'), url('./fonts/Halfomania-Regular.ttf') format('truetype');
-// }
+@font-face {
+  font-family: 'Halfomania-Regular';
+  src: url('./fonts/halfomania-regular/halfomania-regular-webfont.woff2') format('woff2'),
+       url('./fonts/halfomania-regular/halfomania-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
