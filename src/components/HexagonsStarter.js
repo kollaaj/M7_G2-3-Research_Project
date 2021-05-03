@@ -1,55 +1,64 @@
-import React, {  useRef, useState } from 'react';//    useRef, , useEffect,  
-import { gsap } from 'gsap';
-import { SplitText } from 'gsap/SplitText';
+import React, {  useEffect, useRef, useState } from 'react';
 import { GSDevTools } from 'gsap/GSDevTools';
+import { SplitText } from 'gsap/SplitText';
+import { gsap } from 'gsap';
 
 import styles from '../styles/ProjectSection.module.scss';
 
 gsap.registerPlugin(SplitText, GSDevTools);
 
+/**
+ * this component is similar to HexagonsPotatoes which is already commented,
+ * please go take a look at that component for further explanations
+ */
 export default function HexagonsStarter({ id, title, subtitle, text }) {
-  const [toggled, setToggled] = useState(false);
-  const testRef = useRef();
+  const textRef = useRef(null);
+  const [showText, setShowText] = useState(false);
+  const [animation, setAnimation] = useState();
+
+  useEffect(() => {
+    const split = new SplitText([textRef.current]);
+    gsap.set(textRef.current, { autoAlpha: 1 });
+
+    const tl = gsap.timeline();
+    tl
+      .from(textRef.current.querySelectorAll('h4 a'), {
+        opacity: 0,
+        rotation: -20,
+        stagger: 0.1,
+        ease: 'bounce',
+      })
+      .from(split.words, {
+        opacity: 0,
+        rotation: -20,
+        stagger: 0.1,
+        ease: 'bounce',
+      }, "<");
+
+    setAnimation(tl.pause());
+  }, []);
 
   const onClickHandler = () => {
-    if (!toggled) {
-      const split = new SplitText([testRef.current]);
-      gsap.set(testRef.current, { autoAlpha: 1 });
-      gsap.from(split.words, { opacity: 0, rotation: -20, stagger: 0.1, ease: 'bounce' });
-      setToggled(true);
-    } 
+    if (!showText) {
+      animation.play();
+      setShowText(true);
+    } else {
+      animation.reverse();
+      setShowText(false);
+    }
   };
 
-  // const HexRef = useRef();
-  // const hexTween = useRef();
-
-  // useEffect(() => {
-  //   hexTween.current = gsap.to(HexRef.current, {
-  //     duration: 0.5,
-  //     scale: 1.3
-  //   });
-  // }, []);
-
-  // const onMouseEnterHandler = () => {
-  //   hexTween.current.play();
-  // };
-  // const onMouseLeaveHandler = () => {
-  //   hexTween.current.reverse();
-  // };
-
-
-
   return (
-    <div id={id} className={`${styles.hexagonWrapper} ${styles.starter}`} onClick={onClickHandler} > {/*ref={HexRef} onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeaveHandler}*/}  
-      <div className={`${styles.hexagon} ${styles.starter}`}>
+    <div id={id} className={`${styles.hexagonWrapper} ${styles.starter}`}>
+      <div className={`${styles.hexagon} ${styles.starter}`} onClick={onClickHandler}>
         <div className={styles.titleWrapper}>
           <h2 className={styles.h2}>{title}</h2>
           <p id={id} className={styles.p}>{subtitle}</p>
         </div>
       </div>
 
-      <div className={`info ${styles.info} ${styles.starter}`} ref={testRef}>
-        <h4 className={styles.pHexagonInfo} dangerouslySetInnerHTML={{ __html: text }} />
+      <div className={`info ${styles.info} ${styles.starter}`}>
+        <h4 ref={textRef} className={styles.pHexagonInfo} dangerouslySetInnerHTML={{ __html: text }} />
       </div>
     </div>
   )

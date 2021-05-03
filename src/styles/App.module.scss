@@ -76,16 +76,33 @@
       list-style-type: none;
       cursor: pointer;
       display: flex;
+      
+      span {
+        display: none;
+      }
 
-      a {
+      li {
+        width: 130px;
+      }
+
+      li:hover {
+        a {
+          display: none;
+        }
+
+        span {
+          display: inline;
+        }
+      }
+
+      a, span {
         font-family: 'Aldrich', sans-serif;
         font-size: 20px;
         text-decoration: none;
-        padding-right: 2rem;
+        padding: 1rem;
         color: #fafafa;
       }
     }
-
   }
 }
 
@@ -99,7 +116,6 @@
   align-items: center;
 }
 
-
 .progressBarContainer {
   position: fixed;
   z-index: 10;
@@ -109,7 +125,6 @@
   left: 10vw;
   height: 10px;
 }
-
 
 .progressBar {
   background: linear-gradient(to left, #fafafa, #7e690e);

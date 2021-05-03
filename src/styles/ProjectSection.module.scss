@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 .main {
-  // width: auto;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -54,7 +53,7 @@ h2 {
     height: 100vh;
     overflow: hidden;
   }
-  
+
   .SorryText {
     width: 60rem;
     font-family: Halfomania, serif, sans-serif;
@@ -68,7 +67,6 @@ h2 {
     margin-bottom: 40px;
     white-space: normal;
   }
-      
 }
 
 .catecories {
@@ -87,11 +85,9 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  // background-color: cadetblue;
   height: 80vh;
 
   .projectWrapper {
-    // background-color: coral;
     width: 60rem;
     height: 80%;
     position: relative;
@@ -112,16 +108,13 @@ h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     color: #fafafa;
-
     transform: translate3d(0, 0, 0);
     line-height:36px;
     color:#dedede;
   }
 
   & .info {
-    visibility: hidden;
-
-    a {   
+    a {
       display: block;
       padding: 0.5rem 2rem;
       font-size: 1.25rem;
@@ -143,34 +136,33 @@ h2 {
         height: 60px;
         transition: 0.5s ease;
       }
-    
+
       &::after {
         top: -15px;
         left: -15px;
         border-right: none;
         border-bottom: none;
       }
-    
+
       &::before {
         bottom: -15px;
         right: -15px;
         border-left: none;
         border-top: none;
       }
-    
+
       &:hover:after,
       &:hover:before {
         width: calc(100% - 30px);
         height: 80px;
       }
     }
-    
   }
-  
- 
+
   &.starter:first-of-type {
     position: absolute;
     top: 2.5rem;
+
     .info {
       position: absolute;
       top: -2.55rem;
@@ -178,6 +170,7 @@ h2 {
       width: 24rem;
     }
   }
+
   &.starter:nth-of-type(2) {
     position: absolute;
     top: 11.5rem;
@@ -190,9 +183,10 @@ h2 {
       width: 30rem;
     }
   }
+
   &.starter:nth-of-type(3) {
     position: absolute;
-    top: 2.5rem;    
+    top: 2.5rem;
     left: 32rem;
 
     .info {
@@ -202,11 +196,12 @@ h2 {
       width: 25rem;
     }
   }
+
   &.starter:last-of-type {
     position: absolute;
     top: 21rem;
     left: 32rem;
-    
+
     .info {
       position: absolute;
       top: 4rem;
@@ -216,29 +211,31 @@ h2 {
       a {
         display: inline-block;
       }
+
       a:last-of-type {
         margin: 0 2rem 0 2.3rem;
       }
     }
-  
   }
 
   // potaotes section
   &.potatoes:first-of-type {
     position: absolute;
     top: 2.5rem;
+
     .info {
-      
       position: absolute;
       top: -2.55rem;
       right: 15rem;
       width: 24rem;
     }
   }
+
   &.potatoes:nth-of-type(2) {
     position: absolute;
     top: 11.5rem;
     left: 16rem;
+
     .info {
       position: absolute;
       top: 14.5rem;
@@ -246,10 +243,12 @@ h2 {
       width: 32rem;
     }
   }
+
   &.potatoes:nth-of-type(3) {
     position: absolute;
-    top: 2.5rem;    
+    top: 2.5rem;
     left: 32rem;
+
     .info {
       position: absolute;
       top: -2.55rem;
@@ -257,26 +256,32 @@ h2 {
       width: 24rem;
     }
   }
+
   &.potatoes:nth-of-type(4) {
     position: absolute;
-    top: 21rem; 
+    top: 21rem;
+
     .info {
       position: absolute;
       top: 7.5rem;
       right: 17rem;
       width: 30rem;
+
       a {
         display: inline-block;
       }
+
       a:last-of-type {
         margin: 0 2rem -10rem 2.3rem;
       }
     }
   }
+
   &.potatoes:last-of-type {
     position: absolute;
     top: 21rem;
     left: 32rem;
+
     .info {
       position: absolute;
       top: 4.9rem;
@@ -285,10 +290,11 @@ h2 {
     }
   }
 
-  // proud section 
+  // proud section
   &.proud:first-of-type {
     position: absolute;
     top: 2.5rem;
+
     .info {
       position: absolute;
       top: -2.55rem;
@@ -296,62 +302,66 @@ h2 {
       width: 24rem;
     }
   }
- &.proud:last-of-type {
+
+  &.proud:last-of-type {
     position: absolute;
     top: 11.5rem;
     left: 16rem;
+
     .info {
       position: absolute;
       top: -11.6rem;
       left: 15rem;
       width: 28rem;
     }
-
   }
+
   // group section
   &.group:first-of-type {
     position: absolute;
     top: 2.5rem;
+
     .info {
       position: absolute;
       top: -2.55rem;
       right: 13rem;
       width: 28rem;
     }
-
   }
+
   &.group:nth-of-type(2) {
     position: absolute;
     top: 11.5rem;
     left: 16rem;
+
     .info {
       position: absolute;
       top: 16rem;
       right: -8rem;
       width: 32rem;
-    
-    a {
-      display: inline-block;
-    }
-    a:last-of-type {
-      margin: 0 2rem -10rem 2.3rem;
-    }
+
+      a {
+        display: inline-block;
+      }
+
+      a:last-of-type {
+        margin: 0 2rem -10rem 2.3rem;
+      }
     }
   }
- &.group:last-of-type {
+
+  &.group:last-of-type {
     position: absolute;
-    top: 2.5rem;    
+    top: 2.5rem;
     left: 32rem;
+
     .info {
       position: absolute;
       top: -2.55rem;
       left: 13rem;
       width: 22rem;
     }
-    
-      
   }
-
 }
 
 .hexagon {
@@ -380,20 +390,25 @@ h2 {
   transition: 0.5s;
   transform-origin: center;
 }
+
 .hexagon:before {
   transform: rotateZ(60deg);
 }
+
 .hexagon:after {
   transform: rotateZ(-60deg);
 }
+
 .hexagon:hover {
   border-radius: 50px;
   transition: 0.5s;
 }
+
 .hexagon:hover:before {
   border-radius: 50px;
   transition: 0.5s;
 }
+
 .hexagon:hover:after {
   border-radius: 50px;
   transition: 0.5s;
@@ -415,7 +430,6 @@ h2 {
     font-family: 'Aldrich', sans-serif;
     font-size: 1.1rem;
   }
-
 }
 
 .hexagon.starter {
@@ -436,7 +450,6 @@ h2 {
 
 .hexagon.group {
   background: url(/images/noisy2.png), linear-gradient(-180deg, #299B79, #69299B, #372305);
-    // background: linear-gradient(-180deg, #372305 3%, rgba(224, 156, 37, 0.38) 35.94%, rgba(197, 46, 46, 0.79) 68.75%, rgba(105, 41, 155, 0.99) 83.33%, #299B79 96.87%);
 }
 
 .about {
@@ -453,9 +466,7 @@ h2 {
   }
 }
 
-
 .dividerContainer{
-    
   .divider {
     margin-top: 2rem;
     height: 90vh;

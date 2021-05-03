@@ -46,6 +46,13 @@ const ScrollListener = (ref, setTranslateX) => {
 };
 
 export default function HorizontalScroll({ children }) {
+  /**
+   * this component is some black magic that I found on the interwebz
+   * to enable horizontal scrolling ¯\_(ツ)_/¯
+   * 
+   * https://sudo.isl.co/translate-vertical-horizontal/
+   */
+
   const [dynamicHeight, setDynamicHeight] = useState(null);
   const [translateX, setTranslateX] = useState(0);
 
