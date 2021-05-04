@@ -159,6 +159,12 @@ h2 {
     }
   }
 
+  &.starter {
+    .info {
+      overflow: hidden;
+    }
+  }
+
   &.starter:first-of-type {
     position: absolute;
     top: 2.5rem;
@@ -219,6 +225,12 @@ h2 {
   }
 
   // potaotes section
+  &.potatoes {
+    .info {
+      overflow: hidden;
+    }
+  }
+
   &.potatoes:first-of-type {
     position: absolute;
     top: 2.5rem;
